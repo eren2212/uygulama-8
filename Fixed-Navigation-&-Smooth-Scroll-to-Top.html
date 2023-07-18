@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="uygulama.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+html {
+  scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-baslik{
+    background-color: #FC997C;
+    padding: 15px;  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.header-baslik__logo{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.header-nav{
+    display: inline-block;
+    width: calc(100% - 113px);
+}
+
+.header-nav__items{
+    list-style-type: none;
+    text-align: right;
+    
+}
+
+.header-nav__item{
+    display: inline-block;
+    padding: 7px;
+}
+
+.header-nav__item a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav__item a::before{
+    content: '\2023';
+    padding-right: 5px;
+}
+
+.header-nav__item a:hover{
+    color: #2E4C6D;
+}
+
+.header-nav__item_login a::before{
+    content: none;
+}
+
+.header-nav__item_login{
+    border: 2px solid white;
+    padding: 5px 8px 5px 8px;
+    border-radius: 5px;
+    background-color: #2E4C6D;
+}
+.header-nav__item_login:hover{
+    background-color: white;
+    border: 2px solid #2E4C6D;
+    border-radius: 5px;
+}
+
+.main-header{
+    padding:40px 0 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 50px;
+    transform: translate(-50% ,-50%);
+    
+}
+
+.main-section-1{
+    background: url(/resimler/home-bg.jpeg);
+    background-position: center;
+    height: 500px;
+    background-size: cover;  
+}
+
+.main-section-2{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.col{
+    display: inline-block;
+    width: 33%;
+    height: 150px;
+   margin-top: 20px;
+    padding: 30px;
+}
+
+.main-section-2__head{
+    font-size: 30px;
+    color: #3e4555;
+    padding-bottom: 20px;
+}
+
+.sembol{
+    font-size: 50px;
+    padding-bottom: 30px;
+    color: #FC997C;
+}
+
+.main-section-3{
+   margin-top: 100px;
+}
+
+.main-section-3__image{
+    width: 49%;
+    height: 300px;
+    display: inline-block;
+    ;
+    vertical-align: top;
+    ;
+    background: url(/resimler/features.jpeg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.main-section-3__contents{
+    width: 49%;
+    height: 300px;
+    display: inline-block;
+    ;
+    padding:50px 0 20px 20px;
+    background-color:#edf5f7 ;
+}
+
+.main-section-3__contents__head{
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.main-section-3__contents a{
+    display: inline-block;
+    margin-top: 30px;
+    border: 1px solid #FC997C;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #FC997C;
+    color: white;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.main-section-3__contents a:hover{
+    background-color: white;
+    color: #FC997C;
+}
+
+.main-section-4{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.col-2{
+    display:inline-block;
+    width: 30%;
+    background-color: #edf5f7;
+    border-radius: 10px;
+    padding:10px;
+    margin: 5px;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    transition: box-shadow .6s ;
+}
+.col-2:hover{
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.6);
+}
+.main-section-4 ul{
+    padding-bottom: 20px;
+}
+
+.main-section-4__head{
+    padding: 10px;
+}
+.button{
+   text-decoration: none;
+   border: 2px solid grey;
+   border-radius:3px;
+   background-color:rgb(248, 233, 233);
+   color: black;
+   padding: 5px;
+  transition-duration: .3s;
+}
+.button:hover{
+    background-color: #3e4555;
+    color: white;
+}
+
+.plan__important{
+    background-color:#396EB0!important;
+    color: white;
+}
+
+.plan__important_header{
+    background-color:white;
+    color: #FC997C;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.plan__features li{
+   list-style-type: none;
+   padding: 3px;
+}
+#backtotop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+#backtotop i{
+    color: #FC997C;
+    font-size: 45px;
+    transition: color .6s;
+}
+
+#backtotop i:hover{
+    color: #fb6537;
+}
+
+
+    </style>
+</head>
+<body id="body">
+
+    <header class="header-baslik" >
+       <a href ="#"  class="header-baslik__logo">MovieApp</a>
+        <nav class="header-nav">
+            <ul class="header-nav__items">
+                <li class="header-nav__item"><a href="#">Filmler</a></li>
+                <li class="header-nav__item"><a href="#">Diziler</a></li>
+                <li class="header-nav__item header-nav__item_login"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="main-section-1">
+            <h1 class="main-header">Welcome to MovieApp</h1>
+
+        </section>
+
+        <section class="main-section-2">
+            <div>
+                <h1 class="main-section-2__head">How it works?</h1>
+                <p>We will show you step by step how to start watching your favorite movies & tv shows starting now!</p>
+            </div>
+            <div>
+                <div class="col">
+                    <i class="fas fa-sign-in sembol"></i>
+                    <h2 class="main-section-2__head">Register</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-mouse-pointer sembol"></i>
+                    <h2 class="main-section-2__head">Choose a Plan</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-play sembol"></i>
+                    <h2 class="main-section-2__head">Enjoy Moviies</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section-3">
+            <div class="main-section-3__image"></div><div class="main-section-3__contents">
+                <h1 class="main-section-3__contents__head">Watch all Movies & TV Shows once they get released!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat? Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste incidunt esse numquam asperiores hic suscipit.</p>
+                <a href="#">View Features</a>
+            </div>
+        </section>
+       
+        <section class="main-section-4">
+            <h1 style="margin-bottom: 30px;">Become a Premium Member</h1>
+
+            <div>
+                <div class="col-2 plan">
+                    <h2 class="main-section-4__head">Free</h2>
+                    <h3 class="main-section-4__head">0/Month</h3>
+                    <ul class="plan__features">
+                        <li>HD available</li>
+                        <li>Unlimited Movies and TV shows</li>
+                        <li>Watch on your phone & tablet</li>
+                        <li>Download and watch offline</li>
+                        <li>Screens you can watch</li>
+                        <li>First Month Free</li>
+                    </ul>
+                    <a href="#" class="button">Choose Plan</a>
+                </div>
+
+                <div  class="col-2 plan__important ">
+                    <h1 class="plan__important_header">Recommended</h1>
+                    <h2 class="main-section-4__head">Basic</h2>
+                    <h3 class="main-section-4__head">$9.99/Month</h3>
+                    <ul class="plan__features">
+                        <li>HD available</li>
+                        <li>Unlimited Movies and TV shows</li>
+                        <li>Watch on your phone & tablet</li>
+                        <li>Download and watch offline</li>
+                        <li>Screens you can watch</li>
+                        <li>First Month Free</li>
+                    </ul>
+                    <a href="#" class="button">Choose Plan</a>
+                </div>
+
+                <div  class="col-2 plan">
+                    <h2 class="main-section-4__head">Premium</h2>
+                    <h3 class="main-section-4__head">$19.99/Month</h3>
+                    <ul class="plan__features">
+                        <li>HD available</li>
+                        <li>Unlimited Movies and TV shows</li>
+                        <li>Watch on your phone & tablet</li>
+                        <li>Download and watch offline</li>
+                        <li>Screens you can watch</li>
+                        <li>First Month Free</li>
+                    </ul>
+                    <a href="#" class="button">Choose Plan</a>
+                </div>
+
+            </div>
+        </section>
+
+       
+           <a href="#body" id="backtotop"><i class='fas fa-chevron-circle-up'></i></a>
+        
+
+
+    </main>
+    
+</body>
+</html>
